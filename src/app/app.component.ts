@@ -6,5 +6,26 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'my-angular-app';
+  title = "Dynamic title";
+  number = 42;
+
+  obj = {
+    a: 42,
+    b: 64
+  }
+
+  inputValue = "";
+
+  constructor() {
+    
+  }
+
+  onInput(event: Event) {
+    console.log(event);
+    this.inputValue = (<HTMLInputElement>event.target).value;
+  }
+
+  changeInput(value: string) {
+    this.inputValue = value;
+  }
 }
