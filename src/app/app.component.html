@@ -1,17 +1,23 @@
-<!-- <app-post></app-post> -->
+<input type="text" [(ngModel)]="title">
+
 <p>{{title}}</p>
-<p>{{number}}</p>
 
-<p>{{obj | json}}</p>
+<button (click)="backgroundToggle = !backgroundToggle">toggle</button>
 
-<input 
-    type="text" 
-    (keyup.enter)="onInput($event)"
->
+<!-- <p *ngIf="backgroundToggle; else second" class="red">1</p>
 
-<input type="text" (blur)="changeInput(myInput.value)" #myInput>
-<p>
-    <strong>
-        {{inputValue}}
-    </strong>
-</p>
+<ng-template #second>
+    <p class="blue">2</p>
+</ng-template> -->
+
+<!-- <div [ngSwitch]="backgroundToggle">
+    <p *ngSwitchCase="true" class="red">red</p>
+    <p *ngSwitchCase="false" class="blue">blue</p>
+    <p *ngSwitchDefaul>default</p>
+</div> -->
+
+<ul>
+    <li *ngFor="let i of arr; let index = index">
+        {{index + 1}} = <strong>{{i}}</strong>
+    </li>
+</ul>
