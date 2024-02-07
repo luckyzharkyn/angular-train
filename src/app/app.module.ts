@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { PostComponent } from './Post/post.component';
 import { FormsModule } from '@angular/forms';
 import { CounterComponent } from './counter/counter.component';
+import {AppService} from "./app.service";
 
 @NgModule({
   declarations: [
@@ -18,7 +19,7 @@ import { CounterComponent } from './counter/counter.component';
     AppRoutingModule,
     FormsModule
   ],
-  providers: [],
+  providers: [AppService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
